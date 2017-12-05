@@ -64,8 +64,17 @@
             <h3 class="mb-5">
                 <em>Pharmaceutical Testing at its Finest</em>
             </h3>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Get a Quote</a>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Login</a>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="@Url.Action("About" , "Home" )">Get a Quote</a>
+                </div>
+             </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a class="btn btn-primary btn-xl js-scroll-trigger" href="@Url.Action("Contact" , "Home" )" style="padding-left: 60px; padding-right: 60px;
+                        margin-top: 2em;">Log in</a>
+                </div>
+            </div>
         </div>
         <div class="overlay"></div>
     </header>
