@@ -60,5 +60,10 @@ namespace Northwest_Solution.Controllers
             }
         }
 
+        public ActionResult Create()
+        {
+
+            return View();
+        }
     }
 }
