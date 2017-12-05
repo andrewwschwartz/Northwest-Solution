@@ -151,6 +151,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="img\appIcon1.png" />
     <Content Include="img\bg-callout.jpg" />
     <Content Include="img\bg-masthead.jpg" />
     <Content Include="img\portfolio-1.jpg" />
@@ -163,6 +164,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\whiteAppIcon.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -267,6 +269,7 @@
     <Content Include="scss\_services.scss" />
     <Content Include="scss\_sidebar.scss" />
     <Content Include="scss\_variables.scss" />
+    <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+@Styles.Render("~/Content/css")
+<body style="background: linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),url(../img/bg-masthead.jpg);">
+
+    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+    {
+        <div class="container" style="margin-top: 8em; background-color: #ffffffd4; padding: 5em;border-radius: 120px;max-width: 40em;">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <img src="~/img/appIcon1.png" style="height:15em; margin-bottom: 2em;" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <label for="inputEmail">User Name</label>
+                    @Html.TextBox("User Name")
+                </div>
+            </div>
+            <div class="row" style="margin-top: 2em;">
+                <div class="col-md-12 text-center">
+                    <label for="inputPassword">Password</label>
+                    @Html.Password("Password")
+                </div>
+            </div>
+            <div class="row" style="margin-top: 2em;">
+                <div class="col-md-12 text-center">
+                    <button class="btn btn-danger" style="background-color: #1d809f!important; border-color: #1d809f!important;" type="submit">Login</button>
+                </div>
+            </div>
+        </div>
+    }
+
+</body>
