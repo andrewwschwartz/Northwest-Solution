@@ -277,10 +277,14 @@
     <Content Include="scss\_variables.scss" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Client\MyOrders.cshtml" />
+    <Content Include="Views\Client\Details.cshtml" />
+    <Content Include="Views\Client\Approval.cshtml" />
+    <Content Include="Views\Client\History.cshtml" />
+    <Content Include="Views\Client\HistoryDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Client\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
