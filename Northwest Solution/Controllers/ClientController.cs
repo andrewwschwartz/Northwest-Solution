@@ -25,7 +25,7 @@ namespace Northwest_Solution.Controllers
             tests.Add(new SelectListItem { Text = "ImmunoScreen® (IS)", Value = "2"});
             tests.Add(new SelectListItem { Text = "ProfilingScreen® (PF)", Value = "3" });
             tests.Add(new SelectListItem { Text = "DiscoveryScreen® (DS)", Value = "4" });
-            tests.Add(new SelectListItem { Text = "ImmunoScreen® (IS)", Value = "5" });
+            tests.Add(new SelectListItem { Text = "CustomScreen® (CS)", Value = "5" });
             ViewBag.tests = tests;
             ViewBag.AddTests = false;
 
@@ -42,6 +42,18 @@ namespace Northwest_Solution.Controllers
 
             return View();
         }
+
+        public ActionResult MyOrders2(int? i)
+        {
+
+            if (i == 1)
+            {
+                ViewBag.WasApproved = true;
+            }
+
+            return View();
+        }
+
         public ActionResult Details(int? i)
         {
             if (i == 1)
