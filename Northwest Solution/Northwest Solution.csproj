@@ -142,6 +142,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -150,6 +151,7 @@
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Compound.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Quote.cs" />
     <Compile Include="Models\Workorder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -274,7 +276,13 @@
     <Content Include="scss\_services.scss" />
     <Content Include="scss\_sidebar.scss" />
     <Content Include="scss\_variables.scss" />
+    <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Client\MyOrders.cshtml" />
+    <Content Include="Views\Client\Details.cshtml" />
+    <Content Include="Views\Client\Approval.cshtml" />
+    <Content Include="Views\Client\History.cshtml" />
+    <Content Include="Views\Client\HistoryDetails.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Employee\Tab.cshtml" />
     <Content Include="Views\Employee\CreateEmployee.cshtml" />

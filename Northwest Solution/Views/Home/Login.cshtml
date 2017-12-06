@@ -4,7 +4,7 @@
     Layout = null;
 }
 @Styles.Render("~/Content/css")
-<body style="background: linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),url(../img/bg-masthead.jpg);">
+<body class ="masthead" style="background-size: cover; background-position:center; background: url(../img/bg-masthead.jpg)no-repeat center center fixed;">
 
     @using (Html.BeginForm("Login", "Home", FormMethod.Post))
     {
@@ -29,6 +29,12 @@
             <div class="row" style="margin-top: 2em;">
                 <div class="col-md-12 text-center">
                     <button class="btn btn-danger" style="background-color: #1d809f!important; border-color: #1d809f!important;" type="submit">Login</button>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 2em;">
+                <div class="col-md-12 text-center">
+                    Dont have an account? @Html.ActionLink("Create one!", "Create", null, null, new { @class="display-inline-block"}) 
                 </div>
             </div>
         </div>
