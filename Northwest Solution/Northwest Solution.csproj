@@ -327,6 +327,7 @@
     <Content Include="Views\Client\Approval.cshtml" />
     <Content Include="Views\Client\History.cshtml" />
     <Content Include="Views\Client\HistoryDetails.cshtml" />
+    <Content Include="Views\Client\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Employee\Tab.cshtml" />
     <Content Include="Views\Employee\CreateEmployee.cshtml" />
@@ -335,6 +336,9 @@
     <Content Include="Views\Employee\ViewWO.cshtml" />
     <Content Include="Views\Employee\CreateWO.cshtml" />
     <Content Include="Views\Employee\thankYOU.cshtml" />
+
+    <Content Include="Views\Client\QuoteDetails.cshtml" />
+>>>>>>> 3d7a5e523cb436857e6f78d2c7ac10f03a505ed6
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
