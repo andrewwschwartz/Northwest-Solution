@@ -43,17 +43,23 @@
     </div>
     <br />
     <div class="row">
-        <div class="col-md-3 text-center">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-2 text-center">
             @Html.ActionLink("Add Employee", "CreateEmployee", null, null, new { @class = "btn btn-primary btn-xl" })
         </div>
-        <div class="col-md-3 text-center">
+        <div class="col-md-2 text-center">
             @Html.ActionLink("View Work Orders", "ViewWO", null, null, new { @class = "btn btn-primary btn-xl" })
         </div>
-        <div class="col-md-3 text-center">
+        <div class="col-md-2 text-center">
             @Html.ActionLink("Create Work Order", "CreateWO", null, null, new { @class = "btn btn-primary btn-xl" })
         </div>
-        <div class="col-md-3 text-center">
+        <div class="col-md-2 text-center">
             @Html.ActionLink("Edit Work Order", "EditWO", null, null, new { @class = "btn btn-primary btn-xl" })
+        </div>
+        <div class="col-md-2">
+            @Html.ActionLink("Get List of Tests for Week", "GetList", null, null, new { @class = "btn btn-primary btn-xl"})
         </div>
     </div>
     
