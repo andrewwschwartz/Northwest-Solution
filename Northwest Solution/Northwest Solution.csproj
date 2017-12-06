@@ -333,6 +333,8 @@
     <Content Include="Views\Client\GetQuote.cshtml" />
     <Content Include="Views\Client\Index.cshtml" />
     <Content Include="Views\Employee\ViewWO.cshtml" />
+    <Content Include="Views\Employee\CreateWO.cshtml" />
+    <Content Include="Views\Employee\thankYOU.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
