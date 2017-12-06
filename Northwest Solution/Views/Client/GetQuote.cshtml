@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "GetQuote";
+}
+<style>
+    .row{
+        margin-top:2em;
+    }
+
+</style>
+<h2>Get Quote</h2>
+
+@using (Html.BeginForm("GetQuote", "Home", FormMethod.Get))
+{
+<fieldset>
+    <hr />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"><label for="inputTest">Assay to be done </label></div>
+            <div class="col-md-3">@Html.DropDownList("tests")</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-3"><label>May we run additional tests if needed? (Check if yes)</label></div>
+            <div class="col-md-3"> @Html.CheckBox("GetQuote", (bool)ViewBag.AddTests)</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"><label for="inputCompound">Compound Name</label></div>
+            <div class="col-md-3"> @Html.TextBox("CompoundName")</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"><label for="inputEmail"> Weight</label></div>
+            <div class="col-md-3"> @Html.TextBox("CompoundName")</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"><label for="inputEmail">Desired Due Date</label></div>
+            <div class="col-md-3"> @Html.TextBox("Due Date")</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"><label for="inputEmail">Additional Comments</label></div>
+            <div class="col-md-3"> @Html.TextArea("Description", null, new { @class = "form-control" })  </div>
+        </div>
+    </div>
+    <div class="container collapse" id="hidden1">
+        <hr />
+        <div class="row">
+            <div class="col-md-3"><label for="inputTest">Assay to be done </label></div>
+            <div class="col-md-3">@Html.DropDownList("tests")</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-3"><label>May we run additional tests if needed? (Check if yes)</label></div>
+            <div class="col-md-3"> @Html.CheckBox("GetQuote", (bool)ViewBag.AddTests)</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"><label for="inputCompound">Compound Name</label></div>
+            <div class="col-md-3"> @Html.TextBox("CompoundName")</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"><label for="inputEmail"> Weight</label></div>
+            <div class="col-md-3"> @Html.TextBox("CompoundName")</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"><label for="inputEmail">Desired Due Date</label></div>
+            <div class="col-md-3"> @Html.TextBox("Due Date")</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"><label for="inputEmail">Additional Comments</label></div>
+            <div class="col-md-3"> @Html.TextArea("Description", null, new { @class = "form-control" })  </div>
+        </div>
+    </div>
+    <a href="#hidden1" data-toggle="collapse" class="btn btn-primary btn-sm"> Order Another Compound</a>
+
+    <hr />
+    <p>
+        <input type="submit" value="Submit" />
+    </p>
+</fieldset>
+} 
+
