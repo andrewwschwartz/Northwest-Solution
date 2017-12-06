@@ -21,6 +21,10 @@ namespace Northwest_Solution.Models
         [Required(ErrorMessage = "Please enter a password")]
         public string Password { get; set; }
 
+        [DisplayName("Re-Enter Password")]
+        [Required(ErrorMessage = "Please enter a password")]
+        public string RePassword { get; set; }
+
         [DisplayName("Client Name")]
         [Required(ErrorMessage = "Please enter valid client name")]
         public string ClientName { get; set; }
