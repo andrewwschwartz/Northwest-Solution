@@ -51,7 +51,7 @@ namespace Northwest_Solution.Controllers
             {
                 FormsAuthentication.SetAuthCookie(user, rememberMe);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Tab", "Employee");
 
             }
             else
