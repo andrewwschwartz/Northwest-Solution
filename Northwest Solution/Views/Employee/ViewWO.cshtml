@@ -9,8 +9,6 @@
 <a href="#hidden1" data-toggle="collapse" class="btn btn-primary btn-md">Select Client</a>
 <br />
 <br />
-<p>@Html.ActionLink("Back", "Tab", "Employee", null, new { @class = "btn btn-primary btn-medium" })</p>
-<br />
 <div class="container collapse" id="hidden1">
     <table class="table">
         <tr>
@@ -27,6 +25,10 @@
                 <p>Assay Name</p>
             </th>
             <th>
+                <p>Details</p>
+            </th>
+            <th>
+                <p>Invoice</p>
             </th>
         </tr>
 
@@ -46,7 +48,9 @@
 
             <td>
                 @Html.ActionLink("Details", "Details", null, null)
-
+            </td>
+            <td>
+                @Html.ActionLink("Generate Invoice", null, null, null)
             </td>
         </tr>
 
@@ -66,9 +70,9 @@
 
             <td>
                 @Html.ActionLink("Details", "Details", null, null)
-
-
-
+            </td>
+            <td>
+                @Html.ActionLink("Generate Invoice", null, null, null)
             </td>
         </tr>
 
@@ -106,11 +110,33 @@
                         @Html.ActionLink("Approval", "Approval", null, null)
                     }
                 }
-
+            </td>
+            <td>
+                @Html.ActionLink("Generate Invoice", null, null, null)
             </td>
         </tr>
+        <tr>
+            <td>
+                <p>243556</p>
+            </td>
+            <td>
+                <p>5/2/2017</p>
+            </td>
+            <td>
+                <p style="color: green;">Complete</p>
+            </td>
+            <td>
+                <p>CustomScreen</p>
+            </td>
 
+            <td>
+                @Html.ActionLink("Details", "Details", null, null)
+            </td>
+            <td>
+                @Html.ActionLink("Generate Invoice", "Invoice", null, null)
+            </td>
+        </tr>
     </table>
-
-
 </div>
+<br />
+<p>@Html.ActionLink("Back", "Tab", "Employee", null, new { @class = "btn btn-primary btn-medium" })</p>

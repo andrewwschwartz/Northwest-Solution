@@ -7,7 +7,7 @@
     <div class="x_panel">
         <div class="x_title">
             <h2> History</h2>
-            <h4> Client - Client ID</h4>
+            <h4> Tylenol Tech</h4>
             <div class="clearfix"></div>
         </div>
         <div class="x_content">
@@ -18,10 +18,11 @@
                     <tr>
                         <th>Order Number</th>
                         <th>Compound Name</th>
-                        <th>Start Date</th>
+                        <th>End Date</th>
                         <th>Status</th>
+                        <th>Invoice Paid</th>
                         <th>Assay Name</th>
-                        <td>Details</td>
+                        <td></td>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,16 +31,24 @@
                         <td>Calcium Gluconate</td>
                         <td>8/12/2017</td>
                         <td style = "color: green">Complete</td>
+                        <td style="color: green">Paid</td>
                         <td>CustomScreen</td>
-                        <td> @Html.ActionLink("Details", "Details", null, null)</td>
+                        <td> 
+                            @Html.ActionLink("Details", "Details", null, null) ||
+                            @Html.ActionLink("View Invoice", "Invoice", null, null)
+                        </td>
                     </tr>
                     <tr>
                         <td>987456</td>
                         <td>Abraxane</td>
                         <td>7/14/2017</td>
                         <td style="color: green">Complete</td>
+                        <td style="color: dodgerblue">Awaiting Payment</td>
                         <td>CustomScreen</td>
-                        <td> @Html.ActionLink("Details", "Details", null, null)</td>
+                        <td> 
+                            @Html.ActionLink("Details", "Details", null, null) ||
+                            @Html.ActionLink("View Invoice", "Invoice", null, null)
+                        </td>
                     </tr>
 
                     <tr>
@@ -47,8 +56,12 @@
                         <td>Ranitidine</td>
                         <td>03/21/2017</td>
                         <td style="color: green">Complete</td>
+                        <td style="color: red">Not Paid</td>
                         <td>CustomScreen</td>
-                        <td> @Html.ActionLink("Details", "Details", null, null)</td>
+                        <td> 
+                            @Html.ActionLink("Details", "Details", null, null) ||
+                            @Html.ActionLink("View Invoice", "Invoice", null, null)
+                        </td>
                     </tr>
 
                 </tbody>

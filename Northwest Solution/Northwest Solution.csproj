@@ -706,6 +706,8 @@
     <Content Include="Views\Client\MyOrders2.cshtml" />
     <Content Include="Views\Employee\Details.cshtml" />
     <Content Include="Views\Employee\Approval.cshtml" />
+    <Content Include="Views\Employee\Invoice.cshtml" />
+    <Content Include="Views\Client\Invoice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
