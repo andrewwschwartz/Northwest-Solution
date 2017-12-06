@@ -338,7 +338,7 @@
     <Content Include="Views\Employee\thankYOU.cshtml" />
 
     <Content Include="Views\Client\QuoteDetails.cshtml" />
->>>>>>> 3d7a5e523cb436857e6f78d2c7ac10f03a505ed6
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
