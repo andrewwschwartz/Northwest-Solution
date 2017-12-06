@@ -3,5 +3,24 @@
     ViewBag.Title = "QuoteDetails";
 }
 
-<h2>QuoteDetails</h2>
+<h1>Here are the details for your quote:</h1>
 
+<h2>Calcium Gluconate</h2>
+
+<h4>Assay to be done</h4>
+<h5>CustomScreen</h5>
+
+<h4>Weight</h4>
+<h5>5 grams</h5>
+
+<h4>Projected Due Date</h4>
+<h5>4/12/2017</h5>
+
+<h4>Comments</h4>
+<p> *None* </p>
+
+<h2>Your Estimated Quote is: $400 </h2>
+
+<a class="btn btn-primary btn-xl" href="@Url.Action("MyOrders" , "Client" )">Create Order</a>
+
+<a class="btn btn-primary btn-xl" href="@Url.Action("GetQuote" , "Client" )">Get Another Quote</a>
