@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "History";
+}
+
+<h2>History</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            <p>Order Number</p>
+        </th>
+        <th>
+            <p>Start Date</p>
+        </th>
+        <th>
+            <p>Status</p>
+        </th>
+        <th>
+            <p>Assay Name</p>
+        </th>
+        <th>
+        </th>
+    </tr>
+
+    <tr>
+        <td>
+            <p>234765</p>
+        </td>
+        <td>
+            <p>3/12/2017</p>
+        </td>
+        <td>
+            <p>Complete</p>
+        </td>
+        <td>
+            <p>CustomScreen</p>
+        </td>
+
+        <td>
+            @Html.ActionLink("Details", "HistoryDetails", null, null)
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <p>987456</p>
+        </td>
+        <td>
+            <p>2/14/2017</p>
+        </td>
+        <td>
+            <p>Cancelled</p>
+        </td>
+        <td>
+            <p>CustomScreen</p>
+        </td>
+
+        <td>
+            @Html.ActionLink("Details", "HistoryDetails", null, null)
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <p>354876</p>
+        </td>
+        <td>
+            <p>11/21/2016</p>
+        </td>
+        <td>
+
+            <p>Complete</p>
+
+        </td>
+        <td>
+            <p>CustomScreen</p>
+        </td>
+
+        <td>
+        
+           @Html.ActionLink("Details", "HistoryDetails", null, null)
+
+        </td>
+    </tr>
+
+</table>
+
+
+
+
