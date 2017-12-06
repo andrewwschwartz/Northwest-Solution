@@ -327,11 +327,12 @@
     <Content Include="Views\Client\Approval.cshtml" />
     <Content Include="Views\Client\History.cshtml" />
     <Content Include="Views\Client\HistoryDetails.cshtml" />
+    <Content Include="Views\Client\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Employee\Tab.cshtml" />
     <Content Include="Views\Employee\CreateEmployee.cshtml" />
     <Content Include="Views\Client\GetQuote.cshtml" />
-    <Content Include="Views\Client\QuoteDetails.cshtml" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
