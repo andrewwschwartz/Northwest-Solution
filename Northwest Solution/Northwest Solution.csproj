@@ -332,6 +332,7 @@
     <Content Include="Views\Employee\CreateEmployee.cshtml" />
     <Content Include="Views\Client\GetQuote.cshtml" />
     <Content Include="Views\Client\Index.cshtml" />
+    <Content Include="Views\Employee\ViewWO.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
