@@ -44,14 +44,14 @@ namespace Northwest_Solution.Controllers
             {
                 FormsAuthentication.SetAuthCookie(user, rememberMe);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Client");
 
             }
             else if (string.Equals(user, "management") && (string.Equals(password, "northwest")))
             {
                 FormsAuthentication.SetAuthCookie(user, rememberMe);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Employee");
 
             }
             else
