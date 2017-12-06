@@ -3,105 +3,76 @@
     ViewBag.Title = "My Orders";
 }
 
-<h2>MyOrders</h2>
-
-<table class="table">
-    <tr>
-        <th>
-            <p>Order Number</p>
-        </th>
-        <th>
-            <p>Start Date</p>
-        </th>
-        <th>
-            <p>Status</p>       
-        </th>
-        <th>
-            <p>Assay Name</p>        
-        </th>
-        <th>
-        </th>
-    </tr>
-
-        <tr>
-            <td>
-                <p>434882</p>           
-            </td>
-            <td>
-                <p>4/12/2017</p>            
-            </td>
-            <td>
-                <p>Back Order</p>           
-            </td>
-            <td>
-                <p>CustomScreen</p>            
-            </td>
-
-            <td>
-                @Html.ActionLink("Details", "Details", null, null)
-
-            </td>
-        </tr>
-
-    <tr>
-        <td>
-            <p>243556</p>
-        </td>
-        <td>
-            <p>5/2/2017</p>
-        </td>
-        <td>
-            <p>In Progress</p>
-        </td>
-        <td>
-            <p>CustomScreen</p>
-        </td>
-
-        <td>
-            @Html.ActionLink("Details", "Details", null, null)
-
-
-
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <p>984561</p>
-        </td>
-        <td>
-            <p>5/20/2017</p>
-        </td>
-        <td>
-            @{
-                if (ViewBag.WasApproved == true)
-                {
-                    <p>In Progress</p>
-                }
-                else
-                {
-                    <p style="color: red;">Approval Pending</p>
-                }
-            }    
-        </td>
-        <td>
-            <p>CustomScreen</p>
-        </td>
-
-        <td>
-            @{ 
-                if (ViewBag.WasApproved == true)
-                {
-            @Html.ActionLink("Details", "Details", null, null)
-                }
-                else
-                {
-            @Html.ActionLink("Approval", "Approval", null, null)
-                    }
-             }
-
-        </td>
-    </tr>
-
-</table>
-
+<div class="col-md-12 col-sm-12 col-xs-12">
+<div class="x_panel">
+    <div class="x_title">
+        <h2> Insert company name here</h2>
+        <h4> Client ID</h4>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+        <p class="text-muted font-13 m-b-30">
+        </p>
+        <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Order Number</th>
+                    <th>Compound Name</th>
+                    <th>Start Date</th>
+                    <th>Status ID</th>
+                    <th>Assay Name</th>
+                    <td>Details</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>434882</td>
+                    <td>Calcium Gluconate</td>
+                    <td>10/28/2017</td>
+                    <td>Back Order</td>
+                    <td>CustomScreen</td>
+                    <td> @Html.ActionLink("Details", "Details", null, null)</td>
+                </tr>
+                <tr>
+                    <td>243556</td>
+                    <td>Abraxane</td>
+                    <td>11/22/2017</td>
+                    <td>In Progress</td>
+                    <td>CustomScreen</td>
+                    <td> @Html.ActionLink("Details", "Details", null, null)</td>
+                </tr>
+                
+                <tr>
+                    <td>984561</td>
+                    <td>Ranitidine</td>
+                    <td>11/30/2017</td>
+                    <td>
+                        @{
+                            if (ViewBag.WasApproved == true)
+                            {
+                               <p>In Progress</p>
+                            }
+                            else
+                            {
+                                @Html.ActionLink("Approval Pending", "Approval", null, null, new {
+                               @style = "color: red"})
+                           }
+                        }
+                    </td>
+                    <td>CustomScreen</td>
+                    <td> @Html.ActionLink("Details", "Details", null, null)</td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+<div class="row">
+    <div class="col-sm-offset-5 col-sm-1">
+        <p>@Html.ActionLink("Back", "Index", "Client", null, new { @class = "btn btn-primary btn-medium" })</p>
+    </div>
+    <div class="col-sm-1">
+        <p>@Html.ActionLink("History", "History", "Client", null, new { @class = "btn btn-primary btn-medium" })</p>
+    </div>
+</div>

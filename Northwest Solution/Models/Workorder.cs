@@ -22,6 +22,6 @@ namespace Northwest_Solution.Models
         public byte PreApproved { get; set; }
         public DateTime DueDate { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime DateDue { get; set; }
+        public DateTime EndDate { get; set; }
     }
 }

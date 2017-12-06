@@ -6,13 +6,14 @@
 
 <!DOCTYPE html>
 
-<html>
+<html id="top">
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Create</title>
 </head>
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/bootstrap")
 @Styles.Render("~/Content/css")
 
 <body style="background: url(../../img/bg-masthead.jpg)no-repeat center center fixed; padding-top: 20px;
@@ -61,15 +62,18 @@
 
                     <div class="form-group">
                         <div class="col-lg-offset-3 col-lg-9">
-                            <a class="btn btn-primary btn-xl js-scroll-trigger" href="@Url.Action("Login" , "Home" )">Back</a>
-                            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#hidden" data-toggle="collapse">Next</a>
+                            <a class="btn btn-primary btn-xl js-scroll-trigger"  href="@Url.Action("Login" , "Home" )">Back</a>
+                            <a class="btn btn-primary btn-xl js-scroll-trigger"  href="#hidden">Next</a>
+                            <!--<a class="btn btn-primary btn-xl js-scroll-trigger" href="#hidden" data-toggle="collapse">Next</a>-->
                         </div>
                     </div>
                  </div>
             }
                 </div>
         <br /><br /><br />
-        <div id="hidden" class="collapse container" style="margin-top: 2em; background-color: #ffffffd4; padding: 2em;border-radius: 95px;max-width: 35em;">
+
+        <!--<div id="hidden" class="collapse container" style="margin-top: 10em; background-color: #ffffffd4; padding: 2em;border-radius: 95px;max-width: 35em;">-->
+        <div id="hidden" class="container" style="margin-top: 10em; background-color: #ffffffd4; padding: 2em;border-radius: 95px;max-width: 35em;">
 
             @using (Html.BeginForm())
             {
@@ -80,19 +84,15 @@
                     <h4 class="text-center">Find all your orders and order updates all in one place</h4>
                     <hr />
                     <div class="form-group">
+                        @Html.LabelFor(model => model.ClientName, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-12">
-                            @Html.LabelFor(model => model.ClientName, htmlAttributes: new { @class = "control-label" })
-                        </div>    
-                        <div class="col-md-12">
-                            @Html.EditorFor(model => model.ClientName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.EditorFor(model => model.ClientName, new { htmlAttributes = new { @class = "form-control col-md-2" } })
                             @Html.ValidationMessageFor(model => model.ClientName, "", new { @class = "text-danger" })
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-12">
-                            @Html.LabelFor(model => model.RepName, htmlAttributes: new { @class = "control-label" })
-                        </div> 
+                        @Html.LabelFor(model => model.RepName, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-12">
                             @Html.EditorFor(model => model.RepName, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.RepName, "", new { @class = "text-danger" })
@@ -100,9 +100,7 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-12">
-                            @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
-                        </div>    
+                        @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-12">
                             @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
@@ -110,9 +108,7 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-12">
-                            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
-                        </div>    
+                        @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-12">
                             @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
@@ -120,9 +116,7 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-12">
-                            @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
-                        </div>    
+                        @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-12">
                             @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
@@ -130,9 +124,7 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-12">
-                            @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label col-md-2" })
-                        </div>   
+                        @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-12">
                             @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
@@ -140,9 +132,7 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-12">
-                            @Html.LabelFor(model => model.Zip, htmlAttributes: new { @class = "control-label col-md-2" })
-                        </div>    
+                        @Html.LabelFor(model => model.Zip, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-12">
                             @Html.EditorFor(model => model.Zip, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Zip, "", new { @class = "text-danger" })
@@ -150,9 +140,7 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-12">
-                            @Html.LabelFor(model => model.Country, htmlAttributes: new { @class = "control-label col-md-2" })
-                        </div>   
+                        @Html.LabelFor(model => model.Country, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-12">
                             @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
@@ -160,9 +148,7 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-12">
-                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-                        </div>   
+                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-12">
                             @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
@@ -170,9 +156,7 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-12">
-                            @Html.LabelFor(model => model.ClientPhone, htmlAttributes: new { @class = "control-label col-md-2" })
-                        </div>    
+                        @Html.LabelFor(model => model.ClientPhone, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-12">
                             @Html.EditorFor(model => model.ClientPhone, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.ClientPhone, "", new { @class = "text-danger" })
@@ -180,19 +164,20 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <a class="btn btn-primary btn-xl js-scroll-trigger" href="@Url.Action("Index" , "Client" )" style="padding-left: 60px; padding-right: 60px;
-                        margin-top: 2em;">Create</a>
+                        <div class="col-lg-offset-3 col-lg-9">
+                            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#top">Back</a>
+                            <a class="btn btn-primary btn-xl js-scroll-trigger" href="@Url.Action("Index" , "Client" )">Create</a>
+                            <!--<input type="submit" value="Create" class="btn btn-default" />-->
                         </div>
                     </div>
                 </div>
-                }
-            </div>
-
-
-        <div>
-            @Html.ActionLink("Back to List", "Index")
+            }
         </div>
+
+
+        <!-- <div>
+             Html.ActionLink("Back to List", "Index")
+         </div>-->
 </body>
 
 </html>

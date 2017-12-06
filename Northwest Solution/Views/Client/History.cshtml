@@ -3,90 +3,60 @@
     ViewBag.Title = "History";
 }
 
-<h2>History</h2>
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2> History</h2>
+            <h4> Client - Client ID</h4>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <p class="text-muted font-13 m-b-30">
+            </p>
+            <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Order Number</th>
+                        <th>Compound Name</th>
+                        <th>Start Date</th>
+                        <th>Status ID</th>
+                        <th>Assay Name</th>
+                        <td>Details</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>234765</td>
+                        <td>Calcium Gluconate</td>
+                        <td>8/12/2017</td>
+                        <td style = "color: green">Complete</td>
+                        <td>CustomScreen</td>
+                        <td> @Html.ActionLink("Details", "Details", null, null)</td>
+                    </tr>
+                    <tr>
+                        <td>987456</td>
+                        <td>Abraxane</td>
+                        <td>7/14/2017</td>
+                        <td style="color: green">Complete</td>
+                        <td>CustomScreen</td>
+                        <td> @Html.ActionLink("Details", "Details", null, null)</td>
+                    </tr>
 
-<table class="table">
-    <tr>
-        <th>
-            <p>Order Number</p>
-        </th>
-        <th>
-            <p>Start Date</p>
-        </th>
-        <th>
-            <p>Status</p>
-        </th>
-        <th>
-            <p>Assay Name</p>
-        </th>
-        <th>
-        </th>
-    </tr>
+                    <tr>
+                        <td>354876</td>
+                        <td>Ranitidine</td>
+                        <td>03/21/2017</td>
+                        <td style="color: green">Complete</td>
+                        <td>CustomScreen</td>
+                        <td> @Html.ActionLink("Details", "Details", null, null)</td>
+                    </tr>
 
-    <tr>
-        <td>
-            <p>234765</p>
-        </td>
-        <td>
-            <p>3/12/2017</p>
-        </td>
-        <td>
-            <p>Complete</p>
-        </td>
-        <td>
-            <p>CustomScreen</p>
-        </td>
-
-        <td>
-            @Html.ActionLink("Details", "HistoryDetails", null, null)
-
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <p>987456</p>
-        </td>
-        <td>
-            <p>2/14/2017</p>
-        </td>
-        <td>
-            <p>Cancelled</p>
-        </td>
-        <td>
-            <p>CustomScreen</p>
-        </td>
-
-        <td>
-            @Html.ActionLink("Details", "HistoryDetails", null, null)
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <p>354876</p>
-        </td>
-        <td>
-            <p>11/21/2016</p>
-        </td>
-        <td>
-
-            <p>Complete</p>
-
-        </td>
-        <td>
-            <p>CustomScreen</p>
-        </td>
-
-        <td>
-        
-           @Html.ActionLink("Details", "HistoryDetails", null, null)
-
-        </td>
-    </tr>
-
-</table>
-
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<p>@Html.ActionLink("My Orders", "MyOrders", "Client", null, new { @class = "btn btn-primary btn-medium" })</p>
 
 
 

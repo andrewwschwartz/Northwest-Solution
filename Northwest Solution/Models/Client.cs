@@ -29,13 +29,13 @@ namespace Northwest_Solution.Models
         [Required(ErrorMessage = "Please enter valid client name")]
         public string ClientName { get; set; }
 
-        [DisplayName("Company Representative Name")]
+        [DisplayName("Rep Name")]
         [Required(ErrorMessage = "Please enter rep name")]
         public string RepName { get; set; }
 
-        [DisplayName("Rep Phone Number")]
+        [DisplayName("Rep Phone")]
         [Required(ErrorMessage = "Please enter a phone number")]
-        [RegularExpression(@"^\+?\(?\d+\)?(\s|\-|\.)?\d{1,3}(\s|\-|\.)?\d{4}[\s]*[\d]*$")]
+        [RegularExpression(@"^\+?\(?\d+\)?(\s|\-|\.)?\d{1,3}(\s|\-|\.)?\d{4}[\s]*[\d]*$", ErrorMessage = "Please enter a valid Phone Number")]
         public string Phone { get; set; }
 
         [DisplayName("Address")]
@@ -48,7 +48,7 @@ namespace Northwest_Solution.Models
 
         [DisplayName("State")]
         [Required(ErrorMessage = "Please select a State")]
-        [RegularExpression(@"^(?:(A[KLRZ]|C[AOT]|D[CE]|FL|GA|HI|I[ADLN]|K[SY]|LA|M[ADEINOST]|N[CDEHJMVY]|O[HKR]|P[AR]|RI|S[CD]|T[NX]|UT|V[AIT]|W[AIVY]))$")]
+        [RegularExpression(@"^(?:(A[KLRZ]|C[AOT]|D[CE]|FL|GA|HI|I[ADLN]|K[SY]|LA|M[ADEINOST]|N[CDEHJMVY]|O[HKR]|P[AR]|RI|S[CD]|T[NX]|UT|V[AIT]|W[AIVY]))$", ErrorMessage = "Please enter a valid State")]
         public string State { get; set; }
 
         [DisplayName("Zip")]
@@ -67,7 +67,7 @@ namespace Northwest_Solution.Models
 
         [DisplayName("Phone")]
         [Required(ErrorMessage = "Please enter a phone number")]
-        [RegularExpression(@"^\+?\(?\d+\)?(\s|\-|\.)?\d{1,3}(\s|\-|\.)?\d{4}[\s]*[\d]*$")]
+        [RegularExpression(@"^\+?\(?\d+\)?(\s|\-|\.)?\d{1,3}(\s|\-|\.)?\d{4}[\s]*[\d]*$", ErrorMessage = "Please enter a valid Phone Number")]
         public string ClientPhone { get; set; }
 
 
