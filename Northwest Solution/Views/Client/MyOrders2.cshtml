@@ -220,33 +220,15 @@
                                                 <th>Start Date</th>
                                                 <th>Project Progress</th>
                                                 <th>Status</th>
-                                                <th style="width: 20%">#Edit</th>
+                                                <th>Assay Name</th>
+                                                <th style="width: 20%"></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>Andrew Inc.</a>
-                                                    <br />
-                                                    <small>Created 01.01.2015</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                    </ul>
-                                                </td>
+                                                <td>434882</td>
+                                                <td>Calcium Gluconate</td>                                           
+                                                <td>10/28/2017</td>
                                                 <td class="project_progress">
                                                     <div class="progress progress_sm">
                                                         <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="57"></div>
@@ -254,31 +236,19 @@
                                                     <small>57% Complete</small>
                                                 </td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success btn-xs">Success</button>
+                                                    <button type="button" class="btn btn-primary btn-xs">Back Order</button>
                                                 </td>
+                                                <td>CustomScreen</td>
                                                 <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                                    <a href="/Client/Details" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                                                     <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Cancel </a>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>Pesamakini Backend UI</a>
-                                                    <br />
-                                                    <small>Created 01.01.2015</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                    </ul>
-                                                </td>
+                                                <td>243556</td>
+                                                <td>Abraxane</td>
+                                                <td>11/22/2017</td>
                                                 <td class="project_progress">
                                                     <div class="progress progress_sm">
                                                         <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="47"></div>
@@ -286,34 +256,19 @@
                                                     <small>47% Complete</small>
                                                 </td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success btn-xs">Success</button>
+                                                    <button type="button" class="btn btn-success btn-xs">In Progress</button>
                                                 </td>
+                                                <td>CustomScreen</td>
                                                 <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                                    <a href="/Client/Details" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                                                     <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
                                                     <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>Pesamakini Backend UI</a>
-                                                    <br />
-                                                    <small>Created 01.01.2015</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                    </ul>
-                                                </td>
+                                                <td>984561</td>
+                                                <td>Ranitidine</td>
+                                                <td>11/30/2017</td>
                                                 <td class="project_progress">
                                                     <div class="progress progress_sm">
                                                         <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="77"></div>
@@ -321,230 +276,25 @@
                                                     <small>77% Complete</small>
                                                 </td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success btn-xs">Success</button>
+                                                    @{
+                                                        if (ViewBag.WasApproved == true)
+                                                        {
+                                                            <button type="button" class="btn btn-success btn-xs">In Progress</button>
+                                                        }
+                                                        else
+                                                        {
+                                                            @Html.ActionLink("Approval Pending", "Details", null, null, new { @class ="btn btn-danger btn-xs"})
+                                                        }
+                                                    }
                                                 </td>
+                                                <td>CustomScreen</td>
                                                 <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                                    <a href="/Client/Details" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                                                     <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
                                                     <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>Pesamakini Backend UI</a>
-                                                    <br />
-                                                    <small>Created 01.01.2015</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                                <td class="project_progress">
-                                                    <div class="progress progress_sm">
-                                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="60"></div>
-                                                    </div>
-                                                    <small>60% Complete</small>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-xs">Success</button>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>Pesamakini Backend UI</a>
-                                                    <br />
-                                                    <small>Created 01.01.2015</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                                <td class="project_progress">
-                                                    <div class="progress progress_sm">
-                                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="12"></div>
-                                                    </div>
-                                                    <small>12% Complete</small>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-xs">Success</button>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>Pesamakini Backend UI</a>
-                                                    <br />
-                                                    <small>Created 01.01.2015</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                                <td class="project_progress">
-                                                    <div class="progress progress_sm">
-                                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="35"></div>
-                                                    </div>
-                                                    <small>35% Complete</small>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-xs">Success</button>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>Pesamakini Backend UI</a>
-                                                    <br />
-                                                    <small>Created 01.01.2015</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                                <td class="project_progress">
-                                                    <div class="progress progress_sm">
-                                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="87"></div>
-                                                    </div>
-                                                    <small>87% Complete</small>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-xs">Success</button>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>Pesamakini Backend UI</a>
-                                                    <br />
-                                                    <small>Created 01.01.2015</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                                <td class="project_progress">
-                                                    <div class="progress progress_sm">
-                                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="77"></div>
-                                                    </div>
-                                                    <small>77% Complete</small>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-xs">Success</button>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>#</td>
-                                                <td>
-                                                    <a>Pesamakini Backend UI</a>
-                                                    <br />
-                                                    <small>Created 01.01.2015</small>
-                                                </td>
-                                                <td>
-                                                    <ul class="list-inline">
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                        <li>
-                                                            <img src="gentelella/production/images/user.png" class="avatar" alt="Avatar">
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                                <td class="project_progress">
-                                                    <div class="progress progress_sm">
-                                                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="77"></div>
-                                                    </div>
-                                                    <small>77% Complete</small>
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-xs">Success</button>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                                                </td>
-                                            </tr>
+                                            
                                         </tbody>
                                     </table>
                                     <!-- end project list -->
