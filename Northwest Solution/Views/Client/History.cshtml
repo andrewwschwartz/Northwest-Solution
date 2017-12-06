@@ -3,6 +3,7 @@
     ViewBag.Title = "History";
 }
 
+<<<<<<< HEAD
 <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
         <div class="x_title">
@@ -57,6 +58,95 @@
     </div>
 </div>
 <p>@Html.ActionLink("My Orders", "MyOrders", "Client", null, new { @class = "btn btn-primary btn-medium" })</p>
+=======
+<h2>History</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            <p>Order Number</p>
+        </th>
+        <th>
+            <p>Start Date</p>
+        </th>
+        <th>
+            <p>Status</p>
+        </th>
+        <th>
+            <p>Assay Name</p>
+        </th>
+        <th>
+        </th>
+    </tr>
+
+    <tr>
+        <td>
+            <p>234765</p>
+        </td>
+        <td>
+            <p>3/12/2017</p>
+        </td>
+        <td>
+            <p>Complete</p>
+        </td>
+        <td>
+            <p>CustomScreen</p>
+        </td>
+
+        <td>
+            @Html.ActionLink("Details", "HistoryDetails", null, null)
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <p>987456</p>
+        </td>
+        <td>
+            <p>2/14/2017</p>
+        </td>
+        <td>
+            <p>Cancelled</p>
+        </td>
+        <td>
+            <p>CustomScreen</p>
+        </td>
+
+        <td>
+            @Html.ActionLink("Details", "HistoryDetails", null, null)
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <p>354876</p>
+        </td>
+        <td>
+            <p>11/21/2016</p>
+        </td>
+        <td>
+
+            <p>Complete</p>
+
+        </td>
+        <td>
+            <p>CustomScreen</p>
+        </td>
+
+        <td>
+        
+           @Html.ActionLink("Details", "HistoryDetails", null, null)
+
+        </td>
+    </tr>
+
+</table>
+
+<p>@Html.ActionLink("My Orders", "MyOrders", "Client", null, new { @class = "btn btn-primary btn-medium" })</p>
+
+
+>>>>>>> 80165959653e42887f02cc936bac3a7835a5ba0a
 
 
 

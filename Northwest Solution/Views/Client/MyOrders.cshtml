@@ -3,6 +3,7 @@
     ViewBag.Title = "My Orders";
 }
 
+<<<<<<< HEAD
 <div class="col-md-12 col-sm-12 col-xs-12">
 <div class="x_panel">
     <div class="x_title">
@@ -76,3 +77,109 @@
         <p>@Html.ActionLink("History", "History", "Client", null, new { @class = "btn btn-primary btn-medium" })</p>
     </div>
 </div>
+=======
+<h2>MyOrders</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            <p>Order Number</p>
+        </th>
+        <th>
+            <p>Start Date</p>
+        </th>
+        <th>
+            <p>Status</p>       
+        </th>
+        <th>
+            <p>Assay Name</p>        
+        </th>
+        <th>
+        </th>
+    </tr>
+
+        <tr>
+            <td>
+                <p>434882</p>           
+            </td>
+            <td>
+                <p>4/12/2017</p>            
+            </td>
+            <td>
+                <p>Back Order</p>           
+            </td>
+            <td>
+                <p>CustomScreen</p>            
+            </td>
+
+            <td>
+                @Html.ActionLink("Details", "Details", null, null)
+
+            </td>
+        </tr>
+
+    <tr>
+        <td>
+            <p>243556</p>
+        </td>
+        <td>
+            <p>5/2/2017</p>
+        </td>
+        <td>
+            <p>In Progress</p>
+        </td>
+        <td>
+            <p>CustomScreen</p>
+        </td>
+
+        <td>
+            @Html.ActionLink("Details", "Details", null, null)
+
+
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <p>984561</p>
+        </td>
+        <td>
+            <p>5/20/2017</p>
+        </td>
+        <td>
+            @{
+                if (ViewBag.WasApproved == true)
+                {
+                    <p>In Progress</p>
+                }
+                else
+                {
+                    <p style="color: red;">Approval Pending</p>
+                }
+            }    
+        </td>
+        <td>
+            <p>CustomScreen</p>
+        </td>
+
+        <td>
+            @{ 
+                if (ViewBag.WasApproved == true)
+                {
+            @Html.ActionLink("Details", "Details", null, null)
+                }
+                else
+                {
+            @Html.ActionLink("Approval", "Approval", null, null)
+                    }
+             }
+
+        </td>
+    </tr>
+
+</table>
+
+<p>@Html.ActionLink("History", "History", "Client", null, new { @class = "btn btn-primary btn-medium" })</p>
+
+>>>>>>> 80165959653e42887f02cc936bac3a7835a5ba0a
