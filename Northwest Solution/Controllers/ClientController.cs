@@ -64,7 +64,10 @@ namespace Northwest_Solution.Controllers
 
             return View();
         }
-
+        public ActionResult QuoteDetails()
+        {
+            return View();
+        }
 
 
     }
