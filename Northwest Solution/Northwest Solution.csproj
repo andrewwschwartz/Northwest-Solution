@@ -336,9 +336,9 @@
     <Content Include="Views\Employee\ViewWO.cshtml" />
     <Content Include="Views\Employee\CreateWO.cshtml" />
     <Content Include="Views\Employee\thankYOU.cshtml" />
-
     <Content Include="Views\Client\QuoteDetails.cshtml" />
-
+    <Content Include="Views\Employee\Details.cshtml" />
+    <Content Include="Views\Employee\Approval.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

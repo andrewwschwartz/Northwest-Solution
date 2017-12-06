@@ -40,6 +40,21 @@ namespace Northwest_Solution.Controllers
             return View();
         }
 
+        public ActionResult Details(int? i)
+        {
+            if (i == 1)
+            {
+                ViewBag.WasApproved = true;
+            }
+
+            return View();
+        }
+
+        public ActionResult Approval()
+        {
+            return View();
+        }
+
         public ActionResult CreateWO()
         {
             List<SelectListItem> tests = new List<SelectListItem>();

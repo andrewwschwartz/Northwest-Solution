@@ -3,6 +3,8 @@
     ViewBag.Title = "Details";
 }
 
+<h2>Details</h2>
+
 
 <div class="row">
     <div class="col-md-1">
@@ -28,7 +30,7 @@
         <h4>Comments</h4>
         <p>4/20/17 - Waiting on ordered test tubes.</p>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-5">
         <br />
         <br />
         <table class="table">
@@ -109,22 +111,24 @@
                     <p>$100.00</p>
                 </td>
                 <td>
-                    @{
-                        if (ViewBag.WasApproved == true)
-                        {
-                            @Html.ActionLink("Details", "Details", null, null)
-                        }
-                        else
-                        {
-                            @Html.ActionLink("Approval Pending", "Approval", null, null, new
-                   {
-                       @style = "color: red"
-                   })
-                        }
+                   @{
+                       if (ViewBag.WasApproved == true)
+                       {
+                        @Html.ActionLink("Details", "Details", null, null)
+                       }
+                       else
+                       {
+                        @Html.ActionLink("Approval Pending", "Approval", null, null, new
+                           {
+                               @style = "color: red"
+                           })
+                       }
                     }
                 </td>
             </tr>
         </table>
-        @Html.ActionLink("Back to Orders", "MyOrders", null, new { i = 1 }, new { @class = "btn btn-primary btn-md" })
+    </div>
+    <div class="col-md-1">
+
     </div>
 </div>

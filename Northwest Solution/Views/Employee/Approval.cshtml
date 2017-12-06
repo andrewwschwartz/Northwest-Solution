@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Approval";
+}
+
+<h2>Approval</h2>
+
+<h3>A Test has been requested and needs approval</h3>
+<h4>Cost: $100</h4>
+<h4>Explanation</h4>
+<p>The Compound has been found to be active therefore this additional test will be helpful to bring complete results.</p>
+
+<p>@Html.ActionLink("Yes", "Details", "Employee", new { i = 1 }, new { @class = "btn btn-primary btn-medium" })</p>
+<p>@Html.ActionLink("NO", "Details", "Employee", new { i = 1 }, new { @class = "btn btn-danger btn-medium" })</p>
+

@@ -42,8 +42,12 @@ namespace Northwest_Solution.Controllers
 
             return View();
         }
-        public ActionResult Details()
+        public ActionResult Details(int? i)
         {
+            if (i == 1)
+            {
+                ViewBag.WasApproved = true;
+            }
             return View();
         }
 
