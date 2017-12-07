@@ -76,10 +76,40 @@ namespace Northwest_Solution.Controllers
 
         public ActionResult EditWO()
         {
+            List<SelectListItem> assay = new List<SelectListItem>();
+            assay.Add(new SelectListItem { Text = "", Value = "0" });
+            assay.Add(new SelectListItem { Text = "Biochemical Pharmacology (BP)", Value = "1" });
+            assay.Add(new SelectListItem { Text = "DiscoveryScreen® (DS)", Value = "2" });
+            assay.Add(new SelectListItem { Text = "ImmunoScreen® (IS)", Value = "3" });
+            assay.Add(new SelectListItem { Text = "ProfilingScreen® (PF)", Value = "4" });
+            assay.Add(new SelectListItem { Text = "DiscoveryScreen® (DS)", Value = "5" });
+            assay.Add(new SelectListItem { Text = "ImmunoScreen® (IS)", Value = "6" });
+
+            List<SelectListItem> tests = new List<SelectListItem>();
+            tests.Add(new SelectListItem { Text = "", Value = "0" });
+            tests.Add(new SelectListItem { Text = "121", Value = "1" });
+            tests.Add(new SelectListItem { Text = "122", Value = "2" });
+            tests.Add(new SelectListItem { Text = "123", Value = "3" });
+            tests.Add(new SelectListItem { Text = "124", Value = "4" });
+            tests.Add(new SelectListItem { Text = "125", Value = "5" });
+            tests.Add(new SelectListItem { Text = "216", Value = "6" });
+            tests.Add(new SelectListItem { Text = "227", Value = "7" });
+            tests.Add(new SelectListItem { Text = "238", Value = "8" });
+            tests.Add(new SelectListItem { Text = "249", Value = "9" });
+            tests.Add(new SelectListItem { Text = "250", Value = "10" });
+
+            ViewBag.tests = tests;
+            ViewBag.assay = assay;
+
             return View();
         }
 
         public ActionResult Invoice()
+        {
+            return View();
+        }
+
+        public ActionResult GetList()
         {
             return View();
         }
