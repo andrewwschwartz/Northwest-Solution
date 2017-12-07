@@ -485,6 +485,7 @@
     <Content Include="gentelella\production\widgets.html" />
     <Content Include="gentelella\production\xx.html" />
     <Content Include="img\appIcon1.png" />
+    <Content Include="img\avatar.png" />
     <Content Include="img\bg-callout.jpg" />
     <Content Include="img\bg-masthead.jpg" />
     <Content Include="img\portfolio-1.jpg" />
@@ -711,6 +712,7 @@
     <Content Include="Views\Client\Invoice.cshtml" />
     <Content Include="Views\Employee\GetList.cshtml" />
     <Content Include="Views\Employee\EditWO.cshtml" />
+    <Content Include="Views\Client\CreateWO.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
