@@ -8,7 +8,8 @@
         margin-top: 2em;
     }
 </style>
-<h2>Create Work Order</h2>
+<hr />
+<h2 id="meow">Create Work Order</h2>
 @using (Html.BeginForm("CreateWO", "Employee", FormMethod.Get))
 {
     <fieldset>
@@ -66,7 +67,7 @@
                 <div class="col-md-3"> @Html.TextArea("Description", null, new { @class = "form-control" })  </div>
             </div>
         </div>
-        <a href="#hidden1" data-toggle="collapse" class="btn btn-primary btn-sm"> Order Another Compound</a>
+        <a href="#hidden1" data-toggle="collapse" class="btn btn-primary btn-sm"> Add Another Compound</a>
         <hr />
         <div class="row">
             <div class="col-sm-offset-5 col-sm-1">
@@ -78,5 +79,6 @@
         </div>
     </fieldset>
 }
+<link href="~/gentelella/documentation/css/bootstrap.min.css" rel="stylesheet">
 
 

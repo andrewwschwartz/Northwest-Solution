@@ -11,7 +11,7 @@
 <div class="row">
 
     <div class="col-md-6">
-        <h4>Order Number: <small>434882</small></h4>
+        <h4>Order Number: <small>984561</small></h4>
         <h2>Ranitidine</h2>
         <table class="table table-striped dt-responsive nowrap" cellspacing="0">
             <tbody>
@@ -25,7 +25,12 @@
                         @Html.ActionLink("Approval Pending", "Approval", null, null, new { @class = "btn btn-danger btn-xs" })
                     }
                 }</td></tr>
-                <tr><th>Pre Approved:</th> <td class="fa fa-times"> @Html.ActionLink("change", null, null, null, new { @class = "display-inline-block" })</td></tr>
+                <tr>
+                <th>Pre Approved:</th> 
+                <td class="fa fa-times"> 
+                    <small>@Html.ActionLink("change", null, null, null, new { @class = "display-inline-block" })</small>
+                </td>
+                </tr>
                 <tr><th>Date Arrived:</th><td> 11/01/2017</td></tr>
                 <tr><th>Due Date:</th><td> 12/25/2017</td></tr>
                 <tr><th>Start Date:</th><td> 11/06/2017</td></tr>
@@ -99,7 +104,13 @@
                                                 }
                                             </td>
                                         </tr>
-
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><strong>$520.00</strong></td>
+                                            <td></td>
+                                        </tr>
                                     </tbody>
                                 </table>
                                 <!-- end project list -->
@@ -140,7 +151,7 @@
 <!-- pace -->
 <script src="~/gentelella/production/js/pace/pace.min.js"></script>
 <div class="row">
-    <div class="col-sm-offset-5 col-sm-3">
+    <div class="col-sm-1 text-right">
         <p>@Html.ActionLink("Back", "MyOrders", "Client", null, new { @class = "btn btn-primary btn-primary2 btn-large" })</p>
     </div>
 

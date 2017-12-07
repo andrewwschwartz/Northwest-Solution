@@ -16,7 +16,13 @@
         <table class="table table-striped dt-responsive nowrap" cellspacing="0">
             <tbody>
                 <tr><th>Assay:</th><td> Custom Screen</td></tr>
-                <tr><th>Status:</th> <td>@Html.ActionLink("Complete", null, null, null, new { @class = "btn btn-success btn-xs" })</td></tr>
+                <tr>
+                    <th>Status:</th> 
+                    <td>
+                        @Html.ActionLink("Complete", null, null, null, new { @class = "btn btn-success btn-xs" })
+                        <button type="button" class="btn btn-success btn-xs">Paid</button>
+                    </td>
+                </tr>
                 <tr><th>Final Cost:</th><td> $3211.57</td></tr>
                 <tr><th>Date Arrived:</th><td> 11/01/2017</td></tr>
                 <tr><th>Due Date:</th><td> 12/25/2017</td></tr>
@@ -28,7 +34,6 @@
                 <tr><th>Comments:</th><td>none</td></tr>
             </tbody>
         </table>
-        @Html.ActionLink("Download Reports", null, null, new { @class = "btn btn-primary2 btn-medium" })
     </div>
 
     <div class="col-md-6">
@@ -57,7 +62,7 @@
                                     <tbody>
                                         <tr>
                                             <td>137</td>
-                                            <td>12/12/2017</td>
+                                            <td>11/12/2017</td>
                                             <td>None</td>
                                             <td>$1000.00</td>
                                             <td>
@@ -66,7 +71,7 @@
                                         </tr>
                                         <tr>
                                             <td>247</td>
-                                            <td>12/15/2017</td>
+                                            <td>11/15/2017</td>
                                             <td>313</td>
                                             <td>$930.00</td>
                                             <td>
@@ -75,7 +80,7 @@
                                         </tr>
                                         <tr>
                                             <td>256</td>
-                                            <td>TBD</td>
+                                            <td>11/26/2017</td>
                                             <td>247</td>
                                             <td>$1270.00</td>
                                             <td>
@@ -86,7 +91,10 @@
                                     </tbody>
                                 </table>
                                 <!-- end project list -->
-
+                                <div class="row col-lg-12 text-center">
+                                    <a href="" class="btn btn-primary2 btn-medium"><i class="fa fa-download"></i> Report </a>
+                                    <a href="/Client/Invoice" class="btn btn-primary2 btn-medium"><i class="fa fa-file"></i> View Invoice </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -123,8 +131,8 @@
 <!-- pace -->
 <script src="~/gentelella/production/js/pace/pace.min.js"></script>
 <div class="row">
-    <div class="col-sm-offset-5 col-sm-3">
-        <p>@Html.ActionLink("Back", "MyOrders", "Client", null, new { @class = "btn btn-primary btn-primary2 btn-large" })</p>
+    <div class="col-sm-1 text-right">
+        <p>@Html.ActionLink("Back", "History", "Client", null, new { @class = "btn btn-primary btn-primary2 btn-large" })</p>
     </div>
 
 </div>

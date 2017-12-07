@@ -3,144 +3,179 @@
     Layout = "~/Views/Shared/EmpLayout.cshtml";
     ViewBag.Title = "Details";
 }
-
-<h2>Details</h2>
-
-
+<div class="x_title">
+    <br />
+    <h1 id="meow"><strong>Tylenol Tech</strong></h1>
+    <div class="clearfix"></div>
+</div>
 <div class="row">
-    <div class="col-md-1">
 
-    </div>
-    <div class="col-md-5">
-
+    <div class="col-md-6">
+        <h4>Order Number: <small>434882</small></h4>
         <h2>Calcium Gluconate</h2>
+        <table class="table table-striped dt-responsive nowrap" cellspacing="0">
+            <tbody>
+                <tr>
+                    <th>Status:</th>
+                    <td>
+                        <button type="button" class="btn btn-primary2 btn-xs">Back Order</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Pre Approved:</th>
+                    <td class="fa fa-times">
+                        <small>@Html.ActionLink("change", null, null, null, new { @class = "display-inline-block" })</small>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Date Arrived:</th>
+                    <td> 11/01/2017</td>
+                </tr>
+                <tr>
+                    <th>Due Date:</th>
+                    <td> 12/25/2017</td>
+                </tr>
+                <tr>
+                    <th>Start Date:</th>
+                    <td> 11/06/2017</td>
+                </tr>
+                <tr>
+                    <th>Completed Date:</th>
+                    <td>12/25/2017<small>(expected)</small></td>
+                </tr>
+                <tr>
+                    <th>Weight:</th>
+                    <td> 20g</td>
+                </tr>
+                <tr>
+                    <th>Weight Received:</th>
+                    <td> 20g</td>
+                </tr>
+                <tr>
+                    <th>Maximum Tolerated Dose:</th>
+                    <td> 10mg</td>
+                </tr>
+                <tr>
+                    <th>Comments:</th>
+                    <td>Waiting on ordered test tubes.</td>
+                </tr>
+            </tbody>
 
-        <h4>Order Number</h4>
-
-        <h5>434882</h5>
-
-        <h4>Start Date</h4>
-        <h5>4/12/2017</h5>
-
-        <h4>Status</h4>
-        <h5>Back Order</h5>
-        <h4>Assay Name</h4>
-
-        <h5>CustomScreen</h5>
-
-        <h4>Comments</h4>
-        <p>4/20/17 - Waiting on ordered test tubes.</p>
-    </div>
-    <div class="col-md-5">
-        <br />
-        <br />
-        <table class="table">
-            <tr>
-                <th>
-                    <p>Test Number</p>
-                </th>
-                <th>
-                    <p>Scheduled Date</p>
-                </th>
-                <th>
-                    <p>Status</p>
-                </th>
-                <th>
-                    <p>Pre-Requisites</p>
-                </th>
-                <th>
-                    <p>Price</p>
-                </th>
-                <th>
-                    <p>Details</p>
-                </th>
-                <th>
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    <p>247</p>
-                </td>
-                <td>
-                    <p>12/12/2017</p>
-                </td>
-                <td>
-                    <p>In Progress</p>
-                </td>
-                <td>
-                    <p>None</p>
-                </td>
-                <td>
-                    <p>$100.00</p>
-                </td>
-                <td>
-                    @Html.ActionLink("Details", "Details", null, null)
-                </td>
-                <td>
-                    <a href="#">Upload Results</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>137</p>
-                </td>
-                <td>
-                    <p>12/15/2017</p>
-                </td>
-                <td>
-                    <p>In Progress</p>
-                </td>
-                <td>
-                    <p>313</p>
-                </td>
-                <td>
-                    <p>$100.00</p>
-                </td>
-                <td>
-                    @Html.ActionLink("Details", "Details", null, null)
-                </td>
-                <td>
-                    <a href="#">Upload Results</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>256</p>
-                </td>
-                <td>
-                    <p>ADD DATE PICKER</p>
-                </td>
-                <td>
-                    <p>Awaiting Approval</p>
-                </td>
-                <td>
-                    <p>247</p>
-                </td>
-                <td>
-                    <p>$100.00</p>
-                </td>
-                <td>
-                   @{
-                       if (ViewBag.WasApproved == true)
-                       {
-                        @Html.ActionLink("Details", "Details", null, null)
-                       }
-                       else
-                       {
-                        @Html.ActionLink("Approval Pending", "Approval", null, null, new
-                           {
-                               @style = "color: red"
-                           })
-                       }
-                    }
-                </td>
-                <td>
-                    <a href="#">Upload Results</a>
-                </td>
-            </tr>
         </table>
     </div>
-    <div class="col-md-1">
 
+    <div class="col-md-6">
+        <!-- page content -->
+        <div role="main">
+            <div class="">
+                <div class="clearfix"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="x_panel">
+
+                            <div class="x_content">
+                                <br />
+                                <h3>Test History</h3>
+                                <!-- start project list -->
+                                <table class="table table-striped dt-responsive nowrap" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 10%">Test #</th>
+                                            <th style="width: 20%">Scheduled Date</th>
+                                            <th>Pre-Requisites</th>
+                                            <th>Price</th>
+                                            <th>Status</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>137</td>
+                                            <td>12/12/2017</td>
+                                            <td>None</td>
+                                            <td>$100.00</td>
+                                            <td>
+                                                <button type="button" class="btn btn-success btn-xs">Complete</button>
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-upload"></i> Upload Results</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>247</td>
+                                            <td>12/15/2017</td>
+                                            <td>313</td>
+                                            <td>$100.00</td>
+                                            <td>
+                                                <button type="button" class="btn btn-success btn-xs">Complete</button>
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-upload"></i> Upload Results</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>256</td>
+                                            <td><input type="date" id="date" required placeholder="TBD" /></td>
+                                            <td>247</td>
+                                            <td>$320.00</td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary2 btn-xs">Back Order</button>
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-upload"></i> Upload Results</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><strong>$520.00</strong></td>
+                                            <td></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                                <!-- end project list -->
+                                <div class="col-sm-offset-9 col-sm-1 text-right">
+                                    @Html.ActionLink("Save changes", null, null, new { @class = "btn btn-primary btn-large" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /page content -->
+    </div>
+</div>
+
+<!-- Bootstrap core CSS -->
+
+<link href="~/gentelella/documentation/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="~/gentelella/production/fonts/css/font-awesome.min.css" rel="stylesheet">
+<link href="~/gentelella/production/css/animate.min.css" rel="stylesheet">
+
+<!-- Custom styling plus plugins
+<link href="~/gentelella/production/css/custom.css" rel="stylesheet">-->
+<link href="~/gentelella/production/css/icheck/flat/green.css" rel="stylesheet">
+
+<script src="~/gentelella/production/js/jquery.min.js"></script>
+
+<script src="~/gentelella/production/js/bootstrap.min.js"></script>
+
+<!-- bootstrap progress js -->
+<script src="~/gentelella/production/js/progressbar/bootstrap-progressbar.min.js"></script>
+<script src="~/gentelella/production/js/nicescroll/jquery.nicescroll.min.js"></script>
+<!-- icheck -->
+<script src="~/gentelella/production/js/icheck/icheck.min.js"></script>
+
+<script src="~/gentelella/production/js/custom.js"></script>
+
+<!-- pace -->
+<script src="~/gentelella/production/js/pace/pace.min.js"></script>
+<div class="row">
+    <div class="col-sm-1 text-right">
+        <p>@Html.ActionLink("Back", "ViewWO", "Employee", null, new { @class = "btn btn-primary btn-primary2 btn-large" })</p>
     </div>
 </div>

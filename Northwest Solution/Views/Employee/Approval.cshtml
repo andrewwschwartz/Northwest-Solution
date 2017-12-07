@@ -3,14 +3,20 @@
     Layout = "~/Views/Shared/EmpLayout.cshtml";
     ViewBag.Title = "Approval";
 }
-
-<h2>Approval</h2>
-
-<h3>A Test has been requested and needs approval</h3>
-<h4>Cost: $100</h4>
-<h4>Explanation</h4>
-<p>The Compound has been found to be active therefore this additional test will be helpful to bring complete results.</p>
-
-<p>@Html.ActionLink("Yes", "Details", "Employee", new { i = 1 }, new { @class = "btn btn-primary btn-medium" })</p>
-<p>@Html.ActionLink("NO", "Details", "Employee", new { i = 1 }, new { @class = "btn btn-danger btn-medium" })</p>
-
+<div class="jumbotron">
+    <hr /><h2 id="meow">Approval</h2><hr />
+    <h3>Test #256 has been suggested in order to complete testing.</h3>
+    <h4><strong>Explanation</strong></h4>
+    <p>The Compound has been found to be active therefore this additional test will be helpful to bring complete results.</p>
+    <h4>Cost: $320</h4>
+    <p>Would you like to approve the pending test?</p>
+    <div class="row">
+        <div class="col-lg-offset-3 col-lg-1">
+            @Html.ActionLink("Yes", "Details", "Employee", new { i = 1 }, new { @class = "btn btn-primary btn-medium float-right" })
+        </div>
+        <div class="col-lg-1">
+            @Html.ActionLink("No", "Details", "Employee", new { i = 1 }, new { @class = "btn btn-danger btn-medium" })
+        </div>
+    </div>
+</div>
+<link href="~/gentelella/documentation/css/bootstrap.min.css" rel="stylesheet">
