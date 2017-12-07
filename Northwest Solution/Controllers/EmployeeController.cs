@@ -20,11 +20,6 @@ namespace Northwest_Solution.Controllers
             return View();
         }
 
-        public ActionResult Tab1()
-        {
-            return View();
-        }
-
         public ActionResult CreateEmployee()
         {
             return View();
@@ -68,7 +63,7 @@ namespace Northwest_Solution.Controllers
             tests.Add(new SelectListItem { Text = "ImmunoScreen® (IS)", Value = "2" });
             tests.Add(new SelectListItem { Text = "ProfilingScreen® (PF)", Value = "3" });
             tests.Add(new SelectListItem { Text = "DiscoveryScreen® (DS)", Value = "4" });
-            tests.Add(new SelectListItem { Text = "ImmunoScreen® (IS)", Value = "5" });
+            tests.Add(new SelectListItem { Text = "CustomScreen® (CS)", Value = "5" });
             ViewBag.tests = tests;
             ViewBag.AddTests = false;
             return View();
@@ -88,7 +83,7 @@ namespace Northwest_Solution.Controllers
             assay.Add(new SelectListItem { Text = "ImmunoScreen® (IS)", Value = "3" });
             assay.Add(new SelectListItem { Text = "ProfilingScreen® (PF)", Value = "4" });
             assay.Add(new SelectListItem { Text = "DiscoveryScreen® (DS)", Value = "5" });
-            assay.Add(new SelectListItem { Text = "ImmunoScreen® (IS)", Value = "6" });
+            assay.Add(new SelectListItem { Text = "CustomScreen® (CS)", Value = "6" });
 
             List<SelectListItem> tests = new List<SelectListItem>();
             tests.Add(new SelectListItem { Text = "", Value = "0" });

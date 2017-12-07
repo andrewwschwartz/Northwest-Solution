@@ -14,12 +14,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gentallela Alela! | </title>
+    <title>Welcome | Greg Anderson </title>
     <!-- Bootstrap core CSS -->
     <link href="~/gentelella/production/css/bootstrap.min.css" rel="stylesheet">
     <link href="~/gentelella/production/fonts/css/font-awesome.min.css" rel="stylesheet">
     <link href="~/gentelella/production/css/animate.min.css" rel="stylesheet">
     <!-- Custom styling plus plugins -->
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
     <link href="~/Content/custom2.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="~/gentelella/production/css/maps/jquery-jvectormap-2.0.3.css" />
     <link href="~/gentelella/production/css/icheck/flat/green.css" rel="stylesheet">
@@ -34,8 +35,9 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
           <![endif]-->
 </head>
-
 <body class="nav-md">
+
+<!--<body class="nav-md" style="background: url(../img/portfolio-3.jpg) no-repeat fixed center; background-size: cover; ">-->
     <div class="container body">
 
         <div class="main_container">
@@ -59,31 +61,27 @@
                             <li>@Html.ActionLink("Home", "Index", "Home")</listyle="color:>
                             <li>@Html.ActionLink("About", "About", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                            <li>@Html.ActionLink("Manager", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("Manager", "Tab", "Employee")</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <!-- /top navigation -->
             <!-- page content -->
-            <div role="main">
+            <div role="main" style=" background-color: #ffffffd9; padding-right: 40px; padding-left: 40px;">
                 <br />
                 <div class=""><br />
-                    <h1>Welcome Greg Anderson!</h1>
+                    <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"><strong>Welcome Greg Anderson!</strong></h1>
                     <hr />
                     <div class="row">
-                        <div class="col-md-3 text-center">
-                            @Html.ActionLink("Add Employee", "CreateEmployee", null, null, new { @class = "btn btn-primary btn-xl" })
+                        <div class="col-md-4 text-right">
+                            @Html.ActionLink("Client Work Orders", "ViewWO", null, null, new { @class = "btn btn-primary btn-xl" })
                         </div>
-                        <div class="col-md-3 text-center">
-                            @Html.ActionLink("View Work Orders", "ViewWO", null, null, new { @class = "btn btn-primary btn-xl" })
-                        </div>
-
-                        <div class="col-md-3 text-center">
-                            @Html.ActionLink("Edit Work Order", "EditWO", null, null, new { @class = "btn btn-primary btn-xl" })
-                        </div>
-                        <div class="col-md-3 text-center">
+                        <div class="col-md-4 text-center">
                             @Html.ActionLink("Get List of Tests for Week", "GetList", null, null, new { @class = "btn btn-primary btn-xl" })
+                        </div>
+                        <div class="col-md-4 text-left">
+                            @Html.ActionLink("Add Employee", "CreateEmployee", null, null, new { @class = "btn btn-primary btn-xl" })
                         </div>
                     </div>
                     <hr />
@@ -166,26 +164,7 @@
                                     <div class="col-md-3 col-sm-12 col-xs-12">
                                         <div>
                                             <div class="x_title">
-                                                <h2>Worklist</h2>
-                                                <ul class="nav navbar-right panel_toolbox">
-                                                    <li>
-                                                        <a href="#"><i class="fa fa-chevron-up"></i></a>
-                                                    </li>
-                                                    <li class="dropdown">
-                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                                        <ul class="dropdown-menu" role="menu">
-                                                            <li>
-                                                                <a href="#">Settings 1</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">Settings 2</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><i class="fa fa-close"></i></a>
-                                                    </li>
-                                                </ul>
+                                                <h2 class="font-weight-bold">Test Results       <a href="#" class="btn btn-primary btn-xs float-right"><i class="fa fa-file"></i> View All </a></h2>
                                                 <div class="clearfix"></div>
                                             </div>
                                             <ul class="list-unstyled top_profiles scroll-view">
@@ -194,10 +173,10 @@
                                                         <i class="fa fa-user aero"></i>
                                                     </a>
                                                     <div class="media-body">
-                                                        <a class="title" href="#">Ms. Mary Jane</a>
-                                                        <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                                                        <a class="title" href="#">Tylenol Tech</a>
+                                                        <p><strong>A. Schwarts</strong> - <small>Lab Technician</small></p>
                                                         <p>
-                                                            <small>12 Sales Today</small>
+                                                            <small>Test #257 <a class="btn btn-success btn-xs" href="#"> View Test Results</a></small>
                                                         </p>
                                                     </div>
                                                 </li>
@@ -206,10 +185,10 @@
                                                         <i class="fa fa-user green"></i>
                                                     </a>
                                                     <div class="media-body">
-                                                        <a class="title" href="#">Ms. Mary Jane</a>
-                                                        <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                                                        <a class="title" href="#">Bayer</a>
+                                                        <p><strong>J. Holzer</strong> - <small>Lab Technician</small></p>
                                                         <p>
-                                                            <small>12 Sales Today</small>
+                                                            <small>Test #313 <a class="btn btn-success btn-xs" href="#"> View Test Results</a></small>
                                                         </p>
                                                     </div>
                                                 </li>
@@ -218,10 +197,10 @@
                                                         <i class="fa fa-user blue"></i>
                                                     </a>
                                                     <div class="media-body">
-                                                        <a class="title" href="#">Ms. Mary Jane</a>
-                                                        <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                                                        <a class="title" href="#">Apple</a>
+                                                        <p><strong>T. Morse</strong> - <small>Lab Technician</small></p>
                                                         <p>
-                                                            <small>12 Sales Today</small>
+                                                            <small>Test #257 <a class="btn btn-success btn-xs" href="#"> View Test Results</a></small>
                                                         </p>
                                                     </div>
                                                 </li>
@@ -230,10 +209,10 @@
                                                         <i class="fa fa-user aero"></i>
                                                     </a>
                                                     <div class="media-body">
-                                                        <a class="title" href="#">Ms. Mary Jane</a>
-                                                        <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                                                        <a class="title" href="#">Amphetamine Inc.</a>
+                                                        <p><strong>J.Romo</strong> - <small>Lab Technician</small></p>
                                                         <p>
-                                                            <small>12 Sales Today</small>
+                                                            <small>Test #269 <a class="btn btn-success btn-xs" href="#"> View Test Results</a></small>
                                                         </p>
                                                     </div>
                                                 </li>
@@ -242,10 +221,10 @@
                                                         <i class="fa fa-user green"></i>
                                                     </a>
                                                     <div class="media-body">
-                                                        <a class="title" href="#">Ms. Mary Jane</a>
-                                                        <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                                                        <a class="title" href="#">Tylenol Tech</a>
+                                                        <p><strong>A. Schwarts</strong> - <small>Lab Technician</small></p>
                                                         <p>
-                                                            <small>12 Sales Today</small>
+                                                            <small>Test #257 <a class="btn btn-success btn-xs" href="#"> View Test Results</a></small>
                                                         </p>
                                                     </div>
                                                 </li>
@@ -324,6 +303,11 @@
         <div class="clearfix"></div>
         <div id="notif-group" class="tabbed_notifications"></div>
     </div>
+
+    <footer class ="text-center" style=" background-color: #ffffffd9; padding-right: 40px; padding-left: 40px;">
+        <p>&copy; @DateTime.Now.Year - Northwest Labs</p>
+    </footer>
+
     <script src="~/gentelella/production/js/bootstrap.min.js"></script>
     <script src="~/gentelella/production/js/nicescroll/jquery.nicescroll.min.js"></script>
     <!-- bootstrap progress js -->

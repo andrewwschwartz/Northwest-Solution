@@ -4,141 +4,185 @@
     ViewBag.Title = "ViewWO";
 }
 
-<h2>View Work Orders</h2>
-@Html.DropDownList("tests")
-<br /> <br />
-<a href="#hidden1" data-toggle="collapse" class="btn btn-primary btn-md">Select Client</a>
+<h2>Client Work Orders</h2><hr />
+<div class="row" style="padding-left:20px">
+    @Html.DropDownList("tests")
+    <a href="#hidden1" data-toggle="collapse" class="btn btn-primary btn-xs">Select Client</a>
+</div>
 <br />
 <br />
 <div class="container collapse" id="hidden1">
-    <table class="table">
-        <tr>
-            <th>
-                <p>Order Number</p>
-            </th>
-            <th>
-                <p>Start Date</p>
-            </th>
-            <th>
-                <p>Status</p>
-            </th>
-            <th>
-                <p>Assay Name</p>
-            </th>
-            <th>
-                <p>Details</p>
-            </th>
-            <th>
-                <p>Invoice</p>
-            </th>
-        </tr>
+    <div class="main_container">
+        <!-- page content -->
+        <div role="main">
+            <div class="">
+                <div class="clearfix"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <br />
+                                <h1><strong>Tylenol Tech</strong> <small>(968-34567)</small></h1>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <br />
+                                <h3>Work Orders</h3>
 
-        <tr>
-            <td>
-                <p>434882</p>
-            </td>
-            <td>
-                <p>4/12/2017</p>
-            </td>
-            <td>
-                <p>Back Order</p>
-            </td>
-            <td>
-                <p>CustomScreen</p>
-            </td>
+                                <!-- start project list -->
+                                <table class="table table-striped dt-responsive nowrap" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 10%">Order #</th>
+                                            <th style="width: 20%">Compound Name</th>
+                                            <th>Start Date</th>
+                                            <th>Project Progress</th>
+                                            <th>Status</th>
+                                            <th>Assay Name</th>
+                                            <th>Invoice</th>
+                                            <th style="width: 18%"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>434882</td>
+                                            <td>Calcium Gluconate</td>
+                                            <td>10/28/2017</td>
+                                            <td class="project_progress">
+                                                <div class="progress progress_sm">
+                                                    <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="57"></div>
+                                                </div>
+                                                <small>57% Complete</small>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary2 btn-xs">Back Order</button>
+                                            </td>
+                                            <td>CustomScreen</td>
+                                            <td>
+                                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-file"></i> Generate Invoice </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Employee/Details" class="btn btn-primary2 btn-xs"><i class="fa fa-folder"></i> Details </a>
+                                                <a href="/Employee/EditWO" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Cancel </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>243556</td>
+                                            <td>Abraxane</td>
+                                            <td>11/22/2017</td>
+                                            <td class="project_progress">
+                                                <div class="progress progress_sm">
+                                                    <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="47"></div>
+                                                </div>
+                                                <small>47% Complete</small>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-info btn-xs">In Progress</button>
+                                            </td>
+                                            <td>CustomScreen</td>
+                                            <td>
+                                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-file"></i> Generate Invoice </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Employee/Details" class="btn btn-primary2 btn-xs"><i class="fa fa-folder"></i> Details </a>
+                                                <a href="/Employee/EditWO" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>984561</td>
+                                            <td>Ranitidine</td>
+                                            <td>11/30/2017</td>
+                                            <td class="project_progress">
+                                                <div class="progress progress_sm">
+                                                    <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="77"></div>
+                                                </div>
+                                                <small>77% Complete</small>
+                                            </td>
+                                            <td>
+                                                @{
+                                                    if (ViewBag.WasApproved == true)
+                                                    {
+                                                        <button type="button" class="btn btn-info btn-xs">In Progress</button>
+                                                    }
+                                                    else
+                                                    {
+                                                        @Html.ActionLink("Approval Pending", "Details", null, null, new { @class = "btn btn-danger btn-xs" })
+                                                    }
+                                                }
+                                            </td>
+                                            <td>CustomScreen</td>
+                                            <td>
+                                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-file"></i> Generate Invoice </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Employee/Details" class="btn btn-primary2 btn-xs"><i class="fa fa-folder"></i> Details </a>
+                                                <a href="/Employee/EditWO" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>353561</td>
+                                            <td>Yophetamine</td>
+                                            <td>08/24/2017</td>
+                                            <td class="project_progress">
+                                                <div class="progress progress_sm">
+                                                    <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="100"></div>
+                                                </div>
+                                                <small>100% Complete</small>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-success btn-xs">Complete</button>
+                                            </td>
+                                            <td>CustomScreen</td>
+                                            <td>
+                                                <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-file"></i> Generate Invoice </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Employee/Details" class="btn btn-primary2 btn-xs"><i class="fa fa-folder"></i> Details </a>
+                                                <a href="/Employee/EditWO" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                            </td>
+                                        </tr>
 
-            <td>
-                @Html.ActionLink("Details", "Details", null, null)
-            </td>
-            <td>
-                @Html.ActionLink("Generate Invoice", null, null, null)
-            </td>
-        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- end project list -->
 
-        <tr>
-            <td>
-                <p>243556</p>
-            </td>
-            <td>
-                <p>5/2/2017</p>
-            </td>
-            <td>
-                <p>In Progress</p>
-            </td>
-            <td>
-                <p>CustomScreen</p>
-            </td>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /page content -->
+    </div>
+    <!-- Bootstrap core CSS -->
 
-            <td>
-                @Html.ActionLink("Details", "Details", null, null)
-            </td>
-            <td>
-                @Html.ActionLink("Generate Invoice", null, null, null)
-            </td>
-        </tr>
+    <link href="~/gentelella/documentation/css/bootstrap.min.css" rel="stylesheet">
 
-        <tr>
-            <td>
-                <p>984561</p>
-            </td>
-            <td>
-                <p>5/20/2017</p>
-            </td>
-            <td>
-                @{
-                    if (ViewBag.WasApproved == true)
-                    {
-                        <p>In Progress</p>
-                    }
-                    else
-                    {
-                        <p style="color: red;">Approval Pending</p>
-                    }
-                }
-            </td>
-            <td>
-                <p>CustomScreen</p>
-            </td>
+    <link href="~/gentelella/production/fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/gentelella/production/css/animate.min.css" rel="stylesheet">
 
-            <td>
-                @{
-                    if (ViewBag.WasApproved == true)
-                    {
-                        @Html.ActionLink("Details", "Details", null, null)
-                    }
-                    else
-                    {
-                        @Html.ActionLink("Approval", "Approval", null, null)
-                    }
-                }
-            </td>
-            <td>
-                @Html.ActionLink("Generate Invoice", null, null, null)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>243556</p>
-            </td>
-            <td>
-                <p>5/2/2017</p>
-            </td>
-            <td>
-                <p style="color: green;">Complete</p>
-            </td>
-            <td>
-                <p>CustomScreen</p>
-            </td>
+    <!-- Custom styling plus plugins
+    <link href="~/gentelella/production/css/custom.css" rel="stylesheet">-->
+    <link href="~/gentelella/production/css/icheck/flat/green.css" rel="stylesheet">
 
-            <td>
-                @Html.ActionLink("Details", "Details", null, null)
-            </td>
-            <td>
-                @Html.ActionLink("Generate Invoice", "Invoice", null, null)
-            </td>
-        </tr>
+    <script src="~/gentelella/production/js/jquery.min.js"></script>
 
-    </table>
+    <script src="~/gentelella/production/js/bootstrap.min.js"></script>
+
+    <!-- bootstrap progress js -->
+    <script src="~/gentelella/production/js/progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="~/gentelella/production/js/nicescroll/jquery.nicescroll.min.js"></script>
+    <!-- icheck -->
+    <script src="~/gentelella/production/js/icheck/icheck.min.js"></script>
+
+    <script src="~/gentelella/production/js/custom.js"></script>
+
+    <!-- pace -->
+    <script src="~/gentelella/production/js/pace/pace.min.js"></script>
     <div class="col-md-2 text-center">
         @Html.ActionLink("Create Work Order", "CreateWO", null, null, new { @class = "btn btn-primary btn-xl" })
     </div>
