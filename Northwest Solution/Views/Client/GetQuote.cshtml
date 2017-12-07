@@ -70,9 +70,13 @@
     <a href="#hidden1" data-toggle="collapse" class="btn btn-primary btn-sm"> Order Another Compound</a>
 
     <hr />
-    <p>
-        <a class="btn btn-primary btn-xl" href="@Url.Action("QuoteDetails" , "Client" )">Submit</a>
-    </p>
+    <div class="row">
+        <div class="col-sm-offset-5 col-sm-1">
+            <p>@Html.ActionLink("Back", "Index", "Client", null, new { @class = "btn btn-primary btn-primary2 btn-medium" })</p>
+        </div>
+        <div class="col-sm-1">
+            <a class="btn btn-primary btn-xl" href="@Url.Action("QuoteDetails" , "Client" )">Submit</a>        </div>
+    </div>
 </fieldset>
 } 
 

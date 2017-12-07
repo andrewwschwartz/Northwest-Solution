@@ -20,6 +20,11 @@ namespace Northwest_Solution.Controllers
             return View();
         }
 
+        public ActionResult Tab1()
+        {
+            return View();
+        }
+
         public ActionResult CreateEmployee()
         {
             return View();
