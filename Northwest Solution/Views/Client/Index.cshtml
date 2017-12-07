@@ -2,29 +2,29 @@
 @{
     ViewBag.Title = "Index";
 }
-<div class="container" style="margin-top: 2em;">
-    <div class="row">
-        <div class="col-md-5"><h2>Welcome Valued Customer!</h2></div>
-        <div class="col-md-4"><img src="~/img/avatar.png" style="height: 10em;" /></div>
-    </div>
-</div>
-
-<div class="container" style="margin-top: 2em;">
-    <div class="row">
-        <div class="col-md-3">
-            <p>@Html.ActionLink("My Orders", "MyOrders", "Client", null, new { @class = "btn btn-primary btn-medium" })</p>
+<div class="jumbotron">
+    <div class="container" style="margin-top: 2em;">
+        <div class="row">
+            <div class="col-md-5"><h2 id="meow">Welcome Valued Customer!</h2></div>
+            <div class="col-md-4"><img src="~/img/avatar.png" style="height: 7em;" class="img-circle"/></div>
         </div>
-        <div class="col-md-3">
-            <p>@Html.ActionLink("History", "History", "Client", null, new { @class = "btn btn-primary btn-medium" })</p>
-        </div>        
-        <div class="col-md-3">
-            <p>@Html.ActionLink("Get Quote Now", "GetQuote", "Client", null, new { @class = "btn btn-primary btn-medium" })</p>
-        </div>        
-        <div class="col-md-3">
-            <p>@Html.ActionLink("Place New Order", "CreateWO", "Client", null, new { @class = "btn btn-primary btn-medium" })</p>
-        </div>    
+    </div>
+    <div class="container" style="margin-top: 2em;">
+        <div class="row">
+            <div class="col-md-3">
+                <p>@Html.ActionLink("My Orders", "MyOrders", "Client", null, new { @class = "btn btn-primary btn-medium" })</p>
+            </div>
+            <div class="col-md-3">
+                <p>@Html.ActionLink("History", "History", "Client", null, new { @class = "btn btn-primary btn-medium" })</p>
+            </div>
+            <div class="col-md-3">
+                <p>@Html.ActionLink("Get a Quote", "GetQuote", "Client", null, new { @class = "btn btn-primary btn-medium" })</p>
+            </div>
+            <div class="col-md-3">
+                <p>@Html.ActionLink("Place New Order", "CreateWO", "Client", null, new { @class = "btn btn-primary btn-medium" })</p>
+            </div>
+        </div>
     </div>
 </div>
-
 
 

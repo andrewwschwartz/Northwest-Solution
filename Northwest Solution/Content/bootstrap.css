@@ -2095,10 +2095,16 @@ fieldset[disabled] .btn-default.active {
   border-color: #357ebd;
 }
 
-.btn-primary {
+.btn-primary1 {
     color: #ffffff;
     background-color: #1d809f;
     border-color: #1d809f;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #00b8ff;
+    border-color: #00b8ff;
 }
 
 .btn-primary:hover,

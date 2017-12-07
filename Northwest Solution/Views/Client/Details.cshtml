@@ -152,7 +152,14 @@
 <script src="~/gentelella/production/js/pace/pace.min.js"></script>
 <div class="row">
     <div class="col-sm-1 text-right">
-        <p>@Html.ActionLink("Back", "MyOrders", "Client", null, new { @class = "btn btn-primary btn-primary2 btn-large" })</p>
+        @if (ViewBag.WasApproved == true)
+        {
+            <p>@Html.ActionLink("Back", "MyOrders", "Client", new { i = 1}, new { @class = "btn btn-primary btn-primary2 btn-large" })</p>
+        }
+        else
+        {
+            <p>@Html.ActionLink("Back", "MyOrders", "Client", null, new { @class = "btn btn-primary btn-primary2 btn-large" })</p>
+        }
     </div>
 
 </div>
