@@ -3,27 +3,129 @@
     ViewBag.Title = "HistoryDetails";
 }
 
-<h2>Methylprednisolone Acetate</h2>
+<div class="x_title">
+    <br />
+    <h1><strong>Tylenol Tech</strong></h1>
+    <div class="clearfix"></div>
+</div>
+<div class="row">
 
-<h4>Order Number:</h4>
-<h5>234765</h5>
+    <div class="col-md-6">
+        <h4>Order Number: <small>234765</small></h4>
+        <h2>Methylprednisolone Acetate</h2>
+        <table class="table table-striped dt-responsive nowrap" cellspacing="0">
+            <tbody>
+                <tr><th>Assay:</th><td> Custom Screen</td></tr>
+                <tr><th>Status:</th> <td>@Html.ActionLink("Complete", null, null, null, new { @class = "btn btn-success btn-xs" })</td></tr>
+                <tr><th>Final Cost:</th><td> $3211.57</td></tr>
+                <tr><th>Date Arrived:</th><td> 11/01/2017</td></tr>
+                <tr><th>Due Date:</th><td> 12/25/2017</td></tr>
+                <tr><th>Start Date:</th><td> 11/06/2017</td></tr>
+                <tr><th>Completed Date:</th><td>12/25/2017</td></tr>
+                <tr><th>Weight:</th><td> 20g</td></tr>
+                <tr><th>Weight Received:</th><td> 20g</td></tr>
+                <tr><th>Maximum Tolerated Dose:</th><td> 10mg</td></tr>
+                <tr><th>Comments:</th><td>none</td></tr>
+            </tbody>
+        </table>
+        @Html.ActionLink("Download Reports", null, null, new { @class = "btn btn-primary2 btn-medium" })
+    </div>
 
-<h4>Start Date:</h4>
-<h5>2/12/2017</h5>
+    <div class="col-md-6">
+        <!-- page content -->
+        <div role="main">
+            <div class="">
+                <div class="clearfix"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="x_panel">
 
-<h4>Completed Date:</h4>
-<h5>3/7/2017</h5>
+                            <div class="x_content">
+                                <br />
+                                <h3>Test History</h3>
+                                <!-- start project list -->
+                                <table class="table table-striped dt-responsive nowrap" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 10%">Test #</th>
+                                            <th style="width: 20%">Scheduled Date</th>
+                                            <th>Pre-Requisites</th>
+                                            <th>Price</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>137</td>
+                                            <td>12/12/2017</td>
+                                            <td>None</td>
+                                            <td>$1000.00</td>
+                                            <td>
+                                                <button type="button" class="btn btn-success btn-xs">Complete</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>247</td>
+                                            <td>12/15/2017</td>
+                                            <td>313</td>
+                                            <td>$930.00</td>
+                                            <td>
+                                                <button type="button" class="btn btn-success btn-xs">Complete</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>256</td>
+                                            <td>TBD</td>
+                                            <td>247</td>
+                                            <td>$1270.00</td>
+                                            <td>
+                                                <button type="button" class="btn btn-success btn-xs">Complete</button>
+                                            </td>
+                                        </tr>
 
-<h4>Final Price:</h4>
-<h5>$3211.57</h5>
+                                    </tbody>
+                                </table>
+                                <!-- end project list -->
 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /page content -->
+    </div>
+</div>
 
-<h4>Status:</h4>
-<h5>Complete</h5>
+<!-- Bootstrap core CSS -->
 
-<h4>Assay Name:</h4>
-<h5>CustomScreen</h5>
+<link href="~/gentelella/documentation/css/bootstrap.min.css" rel="stylesheet">
 
-<p>@Html.ActionLink("Download Reports", null, null, new { @class = "btn btn-primary btn-medium" })</p>
+<link href="~/gentelella/production/fonts/css/font-awesome.min.css" rel="stylesheet">
+<link href="~/gentelella/production/css/animate.min.css" rel="stylesheet">
 
+<!-- Custom styling plus plugins
+<link href="~/gentelella/production/css/custom.css" rel="stylesheet">-->
+<link href="~/gentelella/production/css/icheck/flat/green.css" rel="stylesheet">
+
+<script src="~/gentelella/production/js/jquery.min.js"></script>
+
+<script src="~/gentelella/production/js/bootstrap.min.js"></script>
+
+<!-- bootstrap progress js -->
+<script src="~/gentelella/production/js/progressbar/bootstrap-progressbar.min.js"></script>
+<script src="~/gentelella/production/js/nicescroll/jquery.nicescroll.min.js"></script>
+<!-- icheck -->
+<script src="~/gentelella/production/js/icheck/icheck.min.js"></script>
+
+<script src="~/gentelella/production/js/custom.js"></script>
+
+<!-- pace -->
+<script src="~/gentelella/production/js/pace/pace.min.js"></script>
+<div class="row">
+    <div class="col-sm-offset-5 col-sm-3">
+        <p>@Html.ActionLink("Back", "MyOrders", "Client", null, new { @class = "btn btn-primary btn-primary2 btn-large" })</p>
+    </div>
+
+</div>
 
