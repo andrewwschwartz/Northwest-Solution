@@ -5,15 +5,15 @@
     ViewBag.Title = "CreateEmployee";
 }
 
-<h2>CreateEmployee</h2>
+<hr />
+<h2 id="meow">Add an Employee</h2>
+<hr />
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Employee</h4>
-        <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -64,5 +64,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Tab")
+    @Html.ActionLink("Back", "Tab", "Employee", null, new { @class = "btn btn-primary btn-medium" })
 </div>

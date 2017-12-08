@@ -3,8 +3,9 @@
     Layout = "~/Views/Shared/EmpLayout.cshtml";
     ViewBag.Title = "GetList";
 }
-
-<h2>Lab Test Schedule</h2>
+<hr />
+<h2 id="meow">Lab Test Schedule</h2>
+<hr />
 
 <table class="table">
     <tr>
@@ -188,7 +189,11 @@
         </td>
     </tr>
 </table>
-
-<button style="margin-right: 5px" class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Print</button>
-@Html.ActionLink("Back to Home", "Tab", null, null, new { @class="btn btn-default btn-md"})
-
+<div class="row">
+    <div class="col-md-offset-1 col-md-2 text-left">
+        @Html.ActionLink("Back to Home", "Tab", null, null, new { @class = "btn btn-default btn-md" })
+    </div>
+    <div class="col-md-8 text-right">
+        <button style="margin-right: 5px" class="btn btn-default" onclick="window.print();"><i class="fa fa-download"></i> Download Excel</button>
+    </div>
+</div>
