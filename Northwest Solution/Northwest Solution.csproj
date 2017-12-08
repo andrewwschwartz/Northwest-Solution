@@ -714,6 +714,7 @@
     <Content Include="Views\Employee\EditWO.cshtml" />
     <Content Include="Views\Client\CreateWO.cshtml" />
     <Content Include="Views\Shared\EmpLayout.cshtml" />
+    <Content Include="Views\Client\thankYOU.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

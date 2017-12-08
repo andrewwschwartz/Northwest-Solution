@@ -104,5 +104,10 @@ namespace Northwest_Solution.Controllers
 
             return View();
         }
+
+        public ActionResult thankYOU()
+        {
+            return View();
+        }
     }
 }
