@@ -2,25 +2,36 @@
 @{
     ViewBag.Title = "QuoteDetails";
 }
+<div class="jumbotron">
+    <div class = "row">
+        <div class = "col-md-offset-1 col-md-5">
+            <hr />
+            <h1 id="meow">Quote Details:</h1>
+            <hr />
+            <h2 id="meow">Calcium Gluconate</h2>
+            <h4 id="meow">Assay:<small> CustomScreen</small></h4>
 
-<h1>Here are the details for your quote:</h1>
-
-<h2>Calcium Gluconate</h2>
-
-<h4>Assay to be done</h4>
-<h5>CustomScreen</h5>
-
-<h4>Weight</h4>
-<h5>5 grams</h5>
-
-<h4>Projected Due Date</h4>
-<h5>4/12/2017</h5>
-
-<h4>Comments</h4>
-<p> *None* </p>
-
-<h2>Your Estimated Quote is: $400 </h2>
-
-<a class="btn btn-primary btn-xl" href="@Url.Action("MyOrders" , "Client" )">Create Order</a>
-
-<a class="btn btn-primary btn-xl" href="@Url.Action("GetQuote" , "Client" )">Get Another Quote</a>
+            <table class="table dt-responsive nowrap" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <th>Weight:</th>
+                        <td>5 grams</td>
+                    </tr>
+                    <tr>
+                        <th>Due Date:</th>
+                        <td>12/20/2017</td>
+                    </tr>
+                    <tr>
+                        <th>Coments:</th>
+                        <td>*None*</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4><strong>Your Estimated Quote is: $400</strong></h4>
+            <hr />
+            <a class="btn btn-primary btn-xl" href="@Url.Action("GetQuote" , "Client" )">Back</a>
+            <a class="btn btn-primary btn-xl" href="@Url.Action("MyOrders" , "Client" )">Create Order</a>
+            <a class="btn btn-primary btn-xl" href="@Url.Action("GetQuote" , "Client" )">Get Another Quote</a>
+        </div>
+       </div>
+</div>

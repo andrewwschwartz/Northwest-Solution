@@ -31,13 +31,15 @@
                 </div>
             </div>
         </div>
-        <div class="container body-content">
+        <div class="container body-content" style="background-color: #eee; margin-bottom: 2em; padding-left: 20px; padding-right: 20px;">
             @RenderBody()
             <hr />
-            <footer class="text-center">
-                <p>&copy; @DateTime.Now.Year - Northwest Labs</p>
-            </footer>
+
         </div>
+    <footer class="text-center">
+        <p>&copy; @DateTime.Now.Year - Northwest Labs</p>
+    </footer>
+
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)

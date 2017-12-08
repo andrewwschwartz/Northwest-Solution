@@ -3,7 +3,7 @@
     ViewBag.Title = "My Orders";
 }
 
-    <div class="main_container">
+    <div class="main_container" style="background-color: #eee; margin-bottom: 2em; padding-left: 20px; padding-right: 20px;">
         <!-- page content -->
         <div role="main">
             <div class="">
@@ -112,6 +112,14 @@
             </div>
         </div>
         <!-- /page content -->
+        <div class="row">
+            <div class="col-sm-offset-5 col-sm-1">
+                <p>@Html.ActionLink("Back", "Index", "Client", null, new { @class = "btn btn-primary btn-primary2 btn-medium" })</p>
+            </div>
+            <div class="col-sm-1">
+                <p>@Html.ActionLink("History", "History", "Client", null, new { @class = "btn btn-primary btn-primary2 btn-medium" })</p>
+            </div>
+        </div>
     </div>
 
 
@@ -142,12 +150,5 @@
 <!-- pace -->
 <script src="~/gentelella/production/js/pace/pace.min.js"></script>
 
-<div class="row">
-    <div class="col-sm-offset-5 col-sm-1">
-        <p>@Html.ActionLink("Back", "Index", "Client", null, new { @class = "btn btn-primary btn-primary2 btn-medium" })</p>
-    </div>
-    <div class="col-sm-1">
-        <p>@Html.ActionLink("History", "History", "Client", null, new { @class = "btn btn-primary btn-primary2 btn-medium" })</p>
-    </div>
-</div>
+
 
